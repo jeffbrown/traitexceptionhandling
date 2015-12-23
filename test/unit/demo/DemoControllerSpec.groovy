@@ -13,4 +13,12 @@ class DemoControllerSpec extends Specification {
         then:
         response.text == 'the exception was handled by the trait method'
     }
+
+    void "test action method"() {
+        when:
+        controller.someAction()
+
+        then:
+        response.text == 'handled by some action'
+    }
 }
